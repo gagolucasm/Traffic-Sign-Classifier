@@ -1,0 +1,3 @@
+model_checkpoint_path: "lenet2"
+all_model_checkpoint_paths: "lenetTop"
+all_model_checkpoint_paths: "lenet2"
