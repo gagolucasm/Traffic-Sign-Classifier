@@ -3,7 +3,7 @@
 
 Overview
 ---
-This project is about classifying traffic signs using deep neural networks and convolutional neural networks. Using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) and later trying to classify new images.
+This project is about classifying traffic signs using deep neural networks and convolutional neural networks. Using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) and later trying to classify new images. Trained on an AWS  GPU instance (g2.2large).
 
 
 The Project
