@@ -34,3 +34,7 @@ cd CarND-Traffic-Sign-Classifier-Project
 jupyter notebook Traffic_Sign_Classifier.ipynb
 ```
 
+
+## Licence
+
+This proyect is Copyright © 2016-2017 Lucas Gago. It is free software, and may be redistributed under the terms specified in the [MIT Licence](https://opensource.org/licenses/MIT).
