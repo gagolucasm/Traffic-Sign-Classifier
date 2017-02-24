@@ -11957,16 +11957,16 @@ Number of classes = 43
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_test</span> <span class="o">=</span> <span class="p">[[</span><span class="n">i</span><span class="p">,</span><span class="nb">sum</span><span class="p">(</span><span class="n">y_test</span> <span class="o">==</span> <span class="n">i</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y_test</span><span class="p">)))]</span>
-<span class="n">data_test_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">data_test</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">data_train</span> <span class="o">=</span> <span class="p">[[</span><span class="n">i</span><span class="p">,</span><span class="nb">sum</span><span class="p">(</span><span class="n">train_labels</span> <span class="o">==</span> <span class="n">i</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">train_labels</span><span class="p">)))]</span>
-<span class="n">data_train_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">data_pd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;signnames.csv&#39;</span><span class="p">)</span>
-<span class="n">data_pd</span><span class="p">[</span><span class="s1">&#39;Occurrence (Train)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data_train_sorted</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data_train_sorted</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">data_pd</span><span class="p">[</span><span class="s1">&#39;Occurrence (Test)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data_test_sorted</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data_test_sorted</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_pd</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;signnames.csv&#39;</span><span class="p">)</span>
+<span class="n">data_train</span><span class="o">=</span><span class="p">[</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="nb">sum</span><span class="p">(</span><span class="n">train_labels</span> <span class="o">==</span> <span class="n">i</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">train_labels</span><span class="p">)))</span> <span class="p">]</span>
+<span class="n">data_train_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">data_test</span><span class="o">=</span><span class="p">[</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="nb">sum</span><span class="p">(</span><span class="n">y_test</span> <span class="o">==</span> <span class="n">i</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y_test</span><span class="p">)))</span> <span class="p">]</span>
+<span class="n">data_test_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">data_test</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">data_pd</span><span class="p">[</span><span class="s1">&#39;Occurrence (Train)&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data_train_sorted</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data_train_sorted</span><span class="p">)[:,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">data_pd</span><span class="p">[</span><span class="s1">&#39;Occurrence (Test)&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data_test_sorted</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data_test_sorted</span><span class="p">)[:,</span><span class="mi">0</span><span class="p">])</span>
 
-<span class="n">data_pd_sorted</span> <span class="o">=</span> <span class="n">data_pd</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;Occurrence (Train)&#39;</span><span class="p">],</span><span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-<span class="n">data_pd_sorted</span> <span class="o">=</span> <span class="n">data_pd_sorted</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">data_pd_sorted</span><span class="o">=</span><span class="n">data_pd</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;Occurrence (Train)&#39;</span><span class="p">],</span><span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">data_pd_sorted</span><span class="o">=</span><span class="n">data_pd_sorted</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11988,7 +11988,7 @@ Number of classes = 43
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_pd_sorted</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_pd_sorted</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12065,7 +12065,7 @@ Number of classes = 43
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_pd_sorted</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_pd_sorted</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -18267,7 +18267,9 @@ rkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Pre-process-the-Data-Set">Pre-process the Data Set<a class="anchor-link" href="#Pre-process-the-Data-Set">&#182;</a></h3><p>After trying different combinations, such as histogram equalization, random rotations, noise and blur, the most simple one gives the best performance.</p>
-<p>The final model only uses the original pictures plus random bright and blur. This generates tree times more data and improves performance by 5%</p>
+<p>The final model only uses the original pictures plus random bright and blur. This generates tree times more data and improves performance by 5%.</p>
+<p>Random bright is generated multipliying by a random number the Y component of the HSV representation of the picture (more info <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">here</a>).</p>
+<p>The blurred picture is a convolution of a 3x3 filter on the image.</p>
 
 </div>
 </div>
@@ -18294,18 +18296,11 @@ for feature in train_features:
     random_bright = .25+rnd_number
     image1[:,:,2] = image1[:,:,2]*random_bright
     image1 = cv2.cvtColor(image1,cv2.COLOR_HSV2BGR)
-    kernel = np.ones((3,3),np.float32)/9
-    image1 = cv2.filter2D(image1,-1,kernel)
     new.append(image1)
     
 #Blur
     
 for feature in train_features:
-    #feature = cv2.cvtColor(feature, cv2.COLOR_BGR2YUV)
-    # equalize the histogram of the Y channel
-    #feature[:,:,0] = cv2.equalizeHist(feature[:,:,0])
-    # convert the YUV image back to RGB format
-    #feature = cv2.cvtColor(feature, cv2.COLOR_YUV2BGR)
     kernel = np.ones((3,3),np.float32)/9
     image1 = cv2.filter2D(feature,-1,kernel)
     new_blur.append(image1)
@@ -19677,11 +19672,10 @@ QmCC
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Normalize between -1 and 1</span>
-<span class="n">X_train</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
-<span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_train</span> <span class="o">=</span>  <span class="n">X_train</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
 <span class="n">X_train</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_train</span> <span class="o">-</span> <span class="mf">128.</span><span class="p">)</span> <span class="o">/</span> <span class="mf">128.</span>
-<span class="n">X_test</span> <span class="o">=</span> <span class="n">X_test</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+<span class="n">X_test</span>  <span class="o">=</span>  <span class="n">X_test</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
 <span class="n">X_test</span>  <span class="o">=</span> <span class="p">(</span><span class="n">X_test</span>  <span class="o">-</span> <span class="mf">128.</span><span class="p">)</span> <span class="o">/</span> <span class="mf">128.</span>
 </pre></div>
 
@@ -19745,7 +19739,7 @@ Validation ready
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Hiperparameters for easy tunning:</p>
+<p>Hiperparameters for easy tunning. Beta is for L2 regularization.</p>
 
 </div>
 </div>
@@ -19928,7 +19922,7 @@ Validation ready
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
-# Add session close after reading previous high score
+
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     num_examples = len(X_train)
@@ -20107,7 +20101,6 @@ Wall time: 10min 20s
     <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
     <span class="n">image</span> <span class="o">=</span> <span class="p">(</span><span class="n">image</span><span class="o">-</span><span class="mf">128.</span><span class="p">)</span><span class="o">/</span><span class="mf">128.</span>
     <span class="k">return</span> <span class="n">image</span>
-
 
 <span class="k">def</span> <span class="nf">showGrid_new_images</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -22140,6 +22133,7 @@ cJOIxEoQBEEQBOEmEYmVIAiCIAjCTfI/tdqR9jV4cYkAAAAASUVORK5CYII=
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">labels_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span>
 <span class="n">feed_dict_new</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">newdata_processed</span><span class="p">,</span><span class="n">keep_prob</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 <span class="n">top5</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">top_k</span><span class="p">(</span><span class="n">labels_pred</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
     <span class="n">saver</span><span class="o">.</span><span class="n">restore</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">save_path</span><span class="o">=</span><span class="s1">&#39;savedata/lenetTop&#39;</span><span class="p">)</span>
     <span class="n">predictions</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">top5</span><span class="p">,</span><span class="n">feed_dict</span> <span class="o">=</span> <span class="n">feed_dict_new</span><span class="p">)</span>
@@ -22173,7 +22167,7 @@ cJOIxEoQBEEQBOEmEYmVIAiCIAjCTfI/tdqR9jV4cYkAAAAASUVORK5CYII=
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="n">top5_pred</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">],</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="n">top5_pred</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">],</span><span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i_label</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">top5_pred</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">i_label</span><span class="p">]</span><span class="o">+.</span><span class="mi">02</span><span class="p">,</span><span class="mi">6</span><span class="o">-</span><span class="n">i_label</span><span class="o">-.</span><span class="mi">25</span><span class="p">,</span><span class="n">data_pd</span><span class="p">[</span><span class="s1">&#39;SignName&#39;</span><span class="p">][</span><span class="n">top5_pred</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">i_label</span><span class="p">]])</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
